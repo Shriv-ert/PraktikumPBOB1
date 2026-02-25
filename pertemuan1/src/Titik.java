@@ -10,12 +10,19 @@ public class Titik {
     /****************ATRIBUT******************/
     double absis;
     double ordinat;
-
+    static int jumlahTitik = 0;
     /****************METHOD******************/
     // konstruktor untuk membuat titik (0,0)
     Titik() {
         absis = 0;
         ordinat = 0;
+        jumlahTitik++;
+    }
+    // konstruktor untuk membuat titik (x,y)
+    Titik(double x, double y) {
+        absis = x;
+        ordinat = y;
+        jumlahTitik++;
     }
 
     // mengembalikan nilai absis
