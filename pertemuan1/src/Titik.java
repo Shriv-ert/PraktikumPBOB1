@@ -44,9 +44,59 @@ public class Titik {
         ordinat = ordinat + x;
     }
 
+    // menentukan kuadran dari titik
+    int getKuadran() {
+        if(absis > 0 && ordinat > 0){
+            return 1;
+        }else if(absis < 0 && ordinat > 0){
+            return 2;
+        }else if(absis < 0 && ordinat < 0){
+            return 3;
+        }else if(absis > 0 && ordinat < 0){
+            return 4;
+        }
+        return 0;
+    }
+
+    // menghitung jarak titik ke pusat koordinat (0,0)
+    double getJarakPusat() {
+        return Math.sqrt(absis*absis + ordinat*ordinat);
+    }
+
+    // menghitung jarak titik ke titik t
+    double getJarak(Titik t) {
+        return Math.sqrt((absis - t.absis)*(absis - t.absis) + (ordinat - t.ordinat)*(ordinat - t.ordinat));
+    }
+
     // mencetak koordinat titik
     void printTitik() {
         System.out.println("Titik (" + absis + "," + ordinat + ")");
+    }
+
+    // merefleksi titik terhadap sumbu x
+    void refleksiX(){
+        ordinat *= -1;
+    }
+
+    // merefleksi titik terhadap sumbu y
+    void refleksiY(){
+        absis *= -1;
+    }
+
+    // kembalikan titik refleksi terhadap sumbu x
+    public Titik getRefleksiX(){
+        Titik t = new Titik();
+        t.setAbsis(absis);
+        t.setOrdinat(-ordinat);
+        return t;
+    }
+
+    // kembalikan titik refleksi terhadap sumbu y
+    public Titik getRefleksiY(){
+        Titik t = new Titik();
+        t.setAbsis(-absis);
+        t.setOrdinat(ordinat);
+        return t;
     }
 }
 
