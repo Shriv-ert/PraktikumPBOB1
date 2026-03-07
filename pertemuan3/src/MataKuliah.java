@@ -25,7 +25,7 @@ public class MataKuliah {
     String getIdMatkul(){
         return idMatkul;
     }
-    //selektor nama    String getNamaMatkul(){
+    //selektor nama
     String getNamaMatkul(){
         return nama;
     }
