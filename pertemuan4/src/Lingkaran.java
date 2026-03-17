@@ -19,7 +19,27 @@ public class Lingkaran extends BangunDatar {
     Lingkaran(String warna, String border, double jariJari) {
         super(jmlSisiLingkaran, warna, border); // memanggil konstruktor superclass untuk mengatur warna, border, dan jumlah sisi
         this.jariJari = jariJari;
-        
     }
-    /****************METHOD******************/
+
+    // SELECTOR
+    // mengembalikan jari jari lingkaran
+    public double getJariJari() {
+        return jariJari;
+    }
+
+    // MUTATOR
+    // mengatur jari jari lingkaran
+    public void setJariJari(double jariJari) {
+        this.jariJari = jariJari;
+    }
+
+    // FUNCTION
+    // menghitung luas lingkaran
+    public double getLuas() {
+        return PI * Math.pow(jariJari, 2);
+    }
+    // menghitung keliling lingkaran
+    public double getKeliling() {
+        return 2 * PI * jariJari;
+    }
 }
