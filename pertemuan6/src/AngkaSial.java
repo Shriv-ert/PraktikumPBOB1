@@ -9,9 +9,9 @@ public class AngkaSial {
    public void cobaAngkaSial(int angka) throws AngkaSialException {
         if (angka == 13) {
             throw new AngkaSialException(); // Melempar exception jika angka yang dimasukkan adalah 13
-        } else {
-            System.out.println(angka + " bukan angka sial."); 
         }
+        System.out.println(angka + " bukan angka sial."); 
+        
     } 
 
     public static void main(String[] args) {
@@ -25,4 +25,11 @@ public class AngkaSial {
             System.out.println("hati hati memasukkan angka sial!");
         } 
     }
-}
+}/*jawaban pertanyaan */
+/*
+jika terjadi exception baris ke 13 tidak akan dieksekusi. saat kondisi if terpenuhi sebuah exception akan dilempar
+dan fungsi akan langsung berhenti sehingga tidak mengeksekusi baris 13.
+
+Baris ke 21 akan dieksekusi. setelah exception dilempar pada baris ke 13, program akan langsung mencari blok catch yang sesuai untuk menangani exception tersebut. 
+Dalam hal ini, blok catch yang menangani AngkaSialException akan dieksekusi, sehingga baris ke 21 akan dijalankan untuk menampilkan pesan dari exception yang terjadi.
+*/
