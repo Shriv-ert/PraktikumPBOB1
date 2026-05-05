@@ -1,0 +1,7 @@
+Simpulkan bagaimana cara kerja konsep Generik sesuai kalimat Anda sendiri!
+Laporkan hasil kerja Anda sesuai petunjuk Asisten!
+
+Konsep generik bekerja dengan cara memberi “wadah” tipe data yang masih fleksibel saat kelas atau method dibuat, 
+lalu tipe aslinya ditentukan ketika objek atau method dipakai. Jadi, kita bisa menulis kode yang sama untuk banyak 
+jenis data tanpa harus membuat versi terpisah untuk setiap tipe.
+
