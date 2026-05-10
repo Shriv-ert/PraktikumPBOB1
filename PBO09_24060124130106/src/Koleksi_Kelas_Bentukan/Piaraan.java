@@ -57,7 +57,22 @@ public class Piaraan {
         }
     }
 
-    // METHOD
+    // Menampilkan nama anabul beserta jenisnya
+    public void showJenisAnabul(){
+        for (Anabul a : lAnabul) {
+            if (a instanceof Kucing) {
+                System.out.println(a.getNama() + " adalah Kucing");
+            } else if (a instanceof Anjing) { // Jika ada subclass lain selain Kucing, bisa ditambahkan di sini
+                System.out.println(a.getNama() + " adalah Anjing");
+            } else if (a instanceof Burung) {
+                System.out.println(a.getNama() + " adalah Burung");
+            } else {
+                System.out.println(a.getNama() + " adalah jenis anabul lainnya"); // Harusnya tidak ada karena subclass hanya ada kucing anjing burung.
+            }
+        }
+    }
+
+    // FUNGSI
     public int countKucing(){
         // Kamus lokal
         int count = 0;
@@ -83,19 +98,6 @@ public class Piaraan {
         return totalBobot;
     }
 
-    public void showJenisAnabul(){
-        for (Anabul a : lAnabul) {
-            if (a instanceof Kucing) {
-                System.out.println(a.getNama() + " adalah Kucing");
-            } else if (a instanceof Anjing) { // Jika ada subclass lain selain Kucing, bisa ditambahkan di sini
-                System.out.println(a.getNama() + " adalah Anjing");
-            } else if (a instanceof Burung) {
-                System.out.println(a.getNama() + " adalah Burung");
-            } else {
-                System.out.println(a.getNama() + " adalah jenis anabul lainnya"); // Harusnya tidak ada karena subclass hanya ada kucing anjing burung.
-            }
-        }
-    }
 
 
 

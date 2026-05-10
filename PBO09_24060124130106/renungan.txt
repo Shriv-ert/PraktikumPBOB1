@@ -1,0 +1,3 @@
+dari implementasi ini saya lumayan paham ada banyak koleksi dan fungsinya berbeda beda. 
+dimana ada list yang random access by index ada queue yang memanfaatkan fifo ada set juga 
+ternyata(yang kudengar dari dosen) yang setiap elemen harus unik. 
