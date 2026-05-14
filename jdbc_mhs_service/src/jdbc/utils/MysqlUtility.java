@@ -4,7 +4,7 @@
  */
 package jdbc.utils;
 
-import java.sql.Connection;
+import java.sql.*;
 
 /**
  *
@@ -17,8 +17,13 @@ public class MysqlUtility {
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 connection = java.sql.DriverManager.getConnection("jdbc:mysql://localhost:3306/pbo", "root", "12345");
-            } catch (Exception e) {
-                e.printStackTrace();
+                if(connection != null) {
+                    System.out.println("Koneksi berhasil!");
+                }
+            } catch (ClassNotFoundException e) {
+                System.out.println("Driver tidak ditemukan: " + e.getMessage());
+            } catch (SQLException e) {
+                System.out.println("Koneksi gagal: " + e.getMessage());
             }
         }
         return connection;
